@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
   def index
-    @projects = ['Save the Planet', 'Philosophy in Schools', 'Coding for Non-coders']
+    @projects = Project.all
   end
 end
