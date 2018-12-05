@@ -1,24 +1,24 @@
 <h1><%= pluralize(@projects.size, 'Project') %></h1>
 
-  <% @projects.each do |project| %>
-    <article>
-      <header>
-        <h3><%= project.name %></h3>
-        <p><%= truncate(project.description, length: 150, separator: ' ') %></p>
-      </header>
-      <table>
-        <tr>
-          <th>Target pledge amount:</th>
-          <td><%= number_to_currency(project.target_pledge_amount) %></td>
-        </tr>
-        <tr>
-          <th>Pledging ends on:</th>
-          <td><%= format_date(project) %></td>
-        </tr>
-        <tr>
-          <th>Website:</th>
-          <td><%= project.website %></td>
-        </tr>
-      </table>
-    </article>
-  <% end %>
+<% @projects.each do |project| %>
+  <article>
+    <header>
+      <h3><%= link_to project.name, project %></h3>
+      <p><%= truncate(project.description, length: 150, separator: ' ') %></p>
+    </header>
+    <table>
+      <tr>
+        <th>Target pledge amount:</th>
+        <td><%= number_to_currency(project.target_pledge_amount) %></td>
+      </tr>
+      <tr>
+        <th>Pledging ends on:</th>
+        <td><%= format_date(project) %></td>
+      </tr>
+      <tr>
+        <th>Website:</th>
+        <td><%= project.website %></td>
+      </tr>
+    </table>
+  </article>
+<% end %>
