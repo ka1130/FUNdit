@@ -10,16 +10,19 @@
     </header>
     <table>
       <tr>
-        <th>Target pledge amount:</th>
+        <td>Target pledge amount:</td>
         <td><%= number_to_currency(project.target_pledge_amount) %></td>
       </tr>
       <tr>
-        <th>Pledging ends on:</th>
+        <td>Pledging ends on:</td>
         <td><%= format_date(project) %></td>
       </tr>
       <tr>
-        <th>Website:</th>
+        <td>Website:</td>
         <td><%= project.website %></td>
+      </tr>
+      <tr>
+        <td> <%= link_to "Delete", project_path(project), method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
     </table>
   </article>
