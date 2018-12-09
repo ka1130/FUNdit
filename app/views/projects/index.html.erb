@@ -7,6 +7,7 @@
     <header>
       <h3><%= link_to project.name, project %></h3>
       <p><%= truncate(project.description, length: 150, separator: ' ') %></p>
+      <%= image_for(project) %>
     </header>
     <table>
       <tr>

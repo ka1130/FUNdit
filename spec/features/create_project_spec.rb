@@ -9,7 +9,8 @@ describe "Creating a new project" do
 
     fill_in "Name", with: "New Project Name"
     fill_in "Description", with: "A brand new project"
-    fill_in "Target pledge amount", with: "3000"
+    fill_in "Team members", with: "The team members"
+    fill_in "Image file name", with: "project.png"
     select (Time.now.year + 1).to_s, from: "project_pledging_ends_on_1i"
     fill_in "Website", with: "http://example.com"
 

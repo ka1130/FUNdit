@@ -1,6 +1,7 @@
 <article>
   <header>
     <h1><%= @project.name %></h1>
+    <%= image_for(@project) %>
   </header>
   <h2>Description</h2>
   <p>
@@ -17,6 +18,10 @@
   <h3>Website:</h3>
   <p>
     <%= @project.website %>
+  </p>
+  <h3>Team members</h3>
+  <p>
+    <%= @project.team_members %>
   </p>
 </article>
 

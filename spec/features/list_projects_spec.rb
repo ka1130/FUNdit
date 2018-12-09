@@ -6,19 +6,22 @@ describe "Viewing the list of projects" do
                               description: "A description of a start-up project",
                               target_pledge_amount: 100.00,
                               pledging_ends_on: 1.day.from_now,
-                              website: "http://project-a.com")
+                              website: "http://project-a.com",
+                              image_file_name: "earth.jpg")
 
     projectB = Project.create(name: "Community Project",
                               description: "A description of a community project",
                               target_pledge_amount: 200.00,
                               pledging_ends_on: 1.week.from_now,
-                              website: "http://project-b.com")
+                              website: "http://project-b.com",
+                              image_file_name: "company.jpeg")
 
     projectC = Project.create(name: "Personal Project",
                               description: "A description of a person project",
                               target_pledge_amount: 300.00,
                               pledging_ends_on: 1.month.from_now,
-                              website: "http://project-c.com")
+                              website: "http://project-c.com",
+                              image_file_name: "personal.jpg")
 
     visit projects_url
 
@@ -30,6 +33,7 @@ describe "Viewing the list of projects" do
     expect(page).to have_text(projectA.description)
     expect(page).to have_text("$100.00")
     expect(page).to have_text(projectA.website)
+    expect(page).to have_css("img[src*='earth']")
   end
 
   it "does not show a project that is no longer accepting pledges" do
