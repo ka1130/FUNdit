@@ -1,7 +1,6 @@
 require "rails_helper"
 
 describe "Viewing the list of projects" do
-
   it "shows the projects stored in the database" do
     projectA = Project.create(name: "Start-Up Project",
                               description: "A description of a start-up project",
@@ -33,4 +32,10 @@ describe "Viewing the list of projects" do
     expect(page).to have_text(projectA.website)
   end
 
+  it "does not show a project that is no longer accepting pledges" do
+    project = Project.new(project_attributes(pledging_ends_on: 1.day.ago))
+    project.save
+    visit projects_path
+    expect(page).not_to have_text(project.name)
+  end
 end
