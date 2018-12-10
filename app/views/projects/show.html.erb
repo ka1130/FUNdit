@@ -1,32 +1,31 @@
-<article>
-  <header>
-    <h1><%= @project.name %></h1>
+<article class="main-content">
+  <header class="single-project-header">
+    <h2><%= @project.name %></h2>
     <%= image_for(@project) %>
   </header>
-  <h2>Description</h2>
+  <h4 class="project-description-title">Description</h4>
+  <p><%= @project.description %></p>
   <p>
-    <%= @project.description %>
-  </p>
-  <h3>Target pledge amount:</h3>
-  <p>
+    <strong>Target pledge amount: </strong>
     <%= number_to_currency(@project.target_pledge_amount) %>
   </p>
-  <h3>Pledging ends on:</h3>
   <p>
+    <strong>Pledging ends on: </strong>
     <%= format_date(@project) %>
   </p>
-  <h3>Website:</h3>
   <p>
+    <strong>Website: </strong>
     <%= @project.website %>
   </p>
-  <h3>Team members</h3>
   <p>
+    <strong>Team members: </strong>
     <%= @project.team_members %>
   </p>
+  <nav class="bottom links">
+    <%= link_to "All projects", projects_path %>
+    <%= link_to "Edit", edit_project_path(@project) %>
+    <%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure?" } %> 
+  </nav>
 </article>
 
-<nav>
-  <%= link_to "All projects", projects_path %>
-  <%= link_to "Edit", edit_project_path(@project) %>
-  <%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure?" } %> 
-</nav>
+

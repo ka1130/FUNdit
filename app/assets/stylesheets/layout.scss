@@ -1,0 +1,81 @@
+@import "colors";
+
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.app-header {
+  padding: 5px;
+  height: 100px;
+  color: $light-grey;
+  background: $poppy;
+  text-align: center;
+  border-bottom: 3px solid darken($poppy, 25%);
+  h1 {
+    line-height: 58px;
+    font-size: 37px;
+  }
+}
+
+.sidebar {
+  float: right;
+  background: $light-grey;
+  width: 200px;
+  height: calc(100vh - 93px);
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    li {
+      padding: 5px 0;
+    }
+    a {
+      color: darken($light-grey, 50%);
+      text-decoration: none;
+    }
+  }
+}
+
+footer {
+  margin-top: 20px;
+  height: 60px;
+  text-align: center;
+  padding: 5px;
+  color: darken($wasabi, 40%);
+  background: $soft-green;
+  border-top: 3px solid darken($soft-green, 25%);
+}
+
+/* show.html.erb */
+.single-project-header {
+  text-transform: uppercase;
+}
+
+.project-description-title {
+  font-size: 22px;
+  color: $poppy;
+  padding: 0;
+  margin: 20px 0 5px 0;
+  & + p {
+    padding: 0;
+    margin: 0 0 40px 0;
+    font-size: 16px;
+    font-style: italic;
+  }
+}
+
+
+
+
+
+
+
+

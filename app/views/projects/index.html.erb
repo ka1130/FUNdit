@@ -1,7 +1,7 @@
 <h1><%= pluralize(@projects.size, 'Project') %></h1>
 
 <% @projects.each do |project| %>
-  <article>
+  <article class="main-content">
     <header>
       <h3><%= link_to project.name, project %></h3>
       <p><%= truncate(project.description, length: 150, separator: ' ') %></p>
