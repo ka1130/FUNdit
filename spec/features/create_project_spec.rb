@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe "Creating a new project" do
-
   it "saves the project and shows the new project's details" do
     visit projects_url
     click_link 'Add New Project'
@@ -20,4 +19,13 @@ describe "Creating a new project" do
     expect(page).to have_text('New Project Name')
   end
 
+  it "does not save the project if it's invalid" do
+    visit new_project_url
+
+    expect {
+      click_button 'Create Project'
+    }.not_to change(Project, :count)
+
+    expect(page).to have_text('error')
+  end
 end

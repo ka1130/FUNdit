@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe "Editing a project" do
-
   it "updates the project and shows the project's updated details" do
     project = Project.create(project_attributes)
     visit project_url(project)
@@ -15,4 +14,11 @@ describe "Editing a project" do
     expect(page).to have_text('Updated Project Name')
   end
 
+  it "does not update the project if it's invalid" do
+    project = Project.create(project_attributes)
+    visit edit_project_url(project)
+    fill_in 'Name', with: " "
+    click_button 'Update Project'
+    expect(page).to have_text('error')
+  end
 end
