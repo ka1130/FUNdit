@@ -1,4 +1,6 @@
 class Project < ApplicationRecord
+  has_many :pledges, dependent: :destroy 
+  
   validates :name, :description, presence: true
   validates :description, length: { maximum: 500 }
   validates :target_pledge_amount, numericality: { greater_than: 0 }
