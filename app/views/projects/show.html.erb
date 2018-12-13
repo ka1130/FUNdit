@@ -21,6 +21,10 @@
     <strong>Team members: </strong>
     <%= @project.team_members %>
   </p>
+  <p>
+    <%= link_to pluralize(@project.pledges.size, "pledge"), 
+                  project_pledges_path(@project) %>
+  </p>
   <nav class="bottom links">
     <%= link_to "All projects", projects_path %>
     <%= link_to "Edit", edit_project_path(@project) %>

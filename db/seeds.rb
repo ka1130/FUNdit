@@ -36,3 +36,9 @@ Project.create!([
   }
 ])
 
+project = Project.find_by(name: 'Start-Up Project')
+project.pledges.create!(name: "Roger Ebert", email: "r.ebert@example.com", comment: "Cool project!", amount: 25)
+project.pledges.create!(name: "Gene Siskel", email: "g.siskel@example.com", comment: "Like this one.", amount: 25)
+project.pledges.create!(name: "Peter Travers", email: "p.travers@example.com", comment: "Go ahead!", amount: 25)
+project = Project.find_by(name: 'Community Project')
+project.pledges.create!(name: "Elvis Mitchell", email: "e.mitchell@example.com", comment: "Cool one!", amount: 25)

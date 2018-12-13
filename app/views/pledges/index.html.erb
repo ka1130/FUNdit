@@ -1,0 +1,17 @@
+<header>
+  <h1>Pledges for <%= link_to(@project.name, @project) %></h2>
+</header>
+
+<ol>
+  <% @pledges.each do |pledge| %>
+    <li>
+      <span><%= number_to_currency(pledge.amount) %></span>
+      <span>by <%= pledge.name %></span>
+      <span>email: <%= pledge.email %></span>
+      <span><%= time_ago_in_words(pledge.created_at) %> ago</span>
+      <p>
+        &quot;<%= pledge.comment %>&quot;
+      </p>
+    </li>
+  <% end %>
+</ol>
