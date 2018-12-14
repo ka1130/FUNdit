@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe "Creating a new pledge" do
-
   it "saves the pledge if it's valid" do
     project = Project.create(project_attributes)
     visit project_url(project)
@@ -22,6 +21,14 @@ describe "Creating a new pledge" do
     expect(page).to have_text("$100.00")
   end
 
-  it "does not save the pledge if it's invalid"
+  it "does not save the pledge if it's invalid" do
+    project = Project.create(project_attributes)
+    visit new_project_pledge_url(project)
 
+    expect {
+      click_button 'Create Pledge'
+    }.not_to change(Pledge, :count)
+
+    expect(page).to have_text('error')
+  end
 end
