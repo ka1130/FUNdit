@@ -21,7 +21,7 @@ describe "Creating a new pledge" do
     expect(page).to have_text("$100.00")
   end
 
-  xit "does not save the pledge if it's invalid" do
+  it "does not save the pledge if it's invalid" do
     project = Project.create(project_attributes)
     visit new_project_pledge_url(project)
 
