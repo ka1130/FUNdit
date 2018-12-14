@@ -25,6 +25,7 @@
     <%= link_to pluralize(@project.pledges.size, "pledge"), 
                   project_pledges_path(@project) %>
   </p>
+  <%= link_to 'Pledge!', new_project_pledge_path(@project) %>
   <nav class="bottom links">
     <%= link_to "All projects", projects_path %>
     <%= link_to "Edit", edit_project_path(@project) %>
