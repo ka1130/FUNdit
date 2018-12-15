@@ -41,14 +41,14 @@ describe "A project" do
     expect(project.total_amount_pledged).to eq(75.00)
   end
 
-  xit "calculates the pledge amount outstanding" do
+  it "calculates the pledge amount outstanding" do
     project = Project.create(project_attributes(target_pledge_amount: 100.00))
     project.pledges.create!(pledge_attributes(amount: 50.00))
 
     expect(project.amount_outstanding).to eq(50.00)    
   end
 
-  it "is funded if the target pledge amount has been reached" do
+  xit "is funded if the target pledge amount has been reached" do
     project = Project.create(project_attributes(target_pledge_amount: 100.00))
     project.pledges.create!(pledge_attributes(amount: 50.00))
     project.pledges.create!(pledge_attributes(amount: 50.00))
@@ -56,7 +56,7 @@ describe "A project" do
     expect(project.funded?).to eq(true)
   end
 
-  it "is not funded if the target pledge amount has not been reached" do
+  xit "is not funded if the target pledge amount has not been reached" do
     project = Project.create(project_attributes(target_pledge_amount: 100.00))
     project.pledges.create!(pledge_attributes(amount: 50.00))
 
