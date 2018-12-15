@@ -21,6 +21,10 @@ class Project < ApplicationRecord
     pledges.sum(:amount)
   end
 
+  def amount_outstanding
+    target_pledge_amount - total_amount_pledged
+  end
+
   def self.ongoing
     where("pledging_ends_on > ?", Time.now).order("target_pledge_amount desc")
   end
