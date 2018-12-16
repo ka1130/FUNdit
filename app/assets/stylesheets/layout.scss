@@ -18,19 +18,6 @@ h1, h2, h3, h4, h5, h6 {
  font-weight: 900;
 }
 
-.app-header {
-  font-family: 'Unica One', cursive;
-  height: 5rem;
-  color: $cream;
-  background-color: $dark-water;
-  border-bottom: 0.2rem solid $cream;
-  h1 {
-    font-size: 3rem;
-    text-align: center;
-    line-height: 5rem;
-  }
-}
-
 .hero {
   background-color: $dark-water;
   background-image: image-url('bg_01.jpg');
@@ -38,15 +25,15 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   background-position: center center;
   background-blend-mode: lighten;
-  height: calc(100vh - 5rem);
+  height: 90vh;
   display:flex;
   align-items: center;
   justify-content: center;
   h2 {
     font-family: 'Noto Serif', cursive;
     color: #fff;
-    font-size: 3rem;
-    line-height: 3.5rem;
+    font-size: 6rem;
+    line-height: 4rem;
     text-align: center;
     padding: 2rem;
   }
