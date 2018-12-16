@@ -3,10 +3,10 @@
 
 .app-header {
   font-family: 'Unica One', cursive;
-  height: 10vh;
+  height: 5rem;
   color: $cream;
   background-color: $dark-water;
-  border-bottom: 0.5rem solid $cream;
+  border-bottom: 0.2rem solid $cream;
   position: fixed;
   top: 0;
   left: 0;
@@ -16,30 +16,30 @@
   transition: opacity .25s ease;
 
   h1 {
-    font-size: 7rem;
+    font-size: 3rem;
     text-align: center;
-    line-height: 10vh;
+    line-height: 5rem;
   }
 }
 
 .button_container {
   position: absolute;
-  top: 4.25rem;
-  right: 5.5rem;
+  top: 1.75rem;
+  right: 2.5rem;
   z-index: 4;
 }
 
 .button_container span {
-  background: #EDF5E1;
+  background: $cream;
   border: none;
-  height: 1rem;
-  width: 1rem;
+  height: 5px;
+  width: 5px;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 10px;
   transition: all .35s ease;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 .button_container:hover {
@@ -47,23 +47,23 @@
 }
 
 .button_container span:nth-of-type(3) {
-  top: 2rem;
+  top: 9px;
 }
 
 .button_container span:nth-of-type(4),
 .button_container span:nth-of-type(5) {
-  top: 4rem;
+  top: 18px;
 }
 
 .button_container.active .top,
 .button_container.active .bottom {
-  transform: translateX(-2rem);
+  transform: translateX(-10px);
   background: #ffffff;
 }
 
 .button_container.active .top2,
 .button_container.active .bottom2 {
-  transform: translateX(2rem);
+  transform: translateX(10px);
   background: #ffffff;
 }
 
@@ -96,7 +96,7 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1.5em;
+  font-size: 2rem;
   font-weight: 400;
   text-align: center;
   color: #ffffff;
@@ -117,7 +117,7 @@
 .overlay.open li {
   animation: fadein 0.5s ease forwards;
   animation-delay: 0.35s;
-  padding: 3px;
+  padding: 1rem;
 }
 
 @keyframes fadein {
@@ -129,9 +129,7 @@
   }
 }
 
-
 /* Firefox < 16 */
-
 @-moz-keyframes fadein {
   from {
     opacity: 0;
@@ -141,9 +139,7 @@
   }
 }
 
-
 /* Safari, Chrome and Opera > 12.1 */
-
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
@@ -153,9 +149,7 @@
   }
 }
 
-
 /* Internet Explorer */
-
 @-ms-keyframes fadein {
   from {
     opacity: 0;
@@ -165,9 +159,7 @@
   }
 }
 
-
 /* Opera < 12.1 */
-
 @-o-keyframes fadein {
   from {
     opacity: 0;

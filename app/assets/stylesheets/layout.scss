@@ -19,21 +19,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero {
-  background-color: $dark-water;
+  background-color: #05386B;
   background-image: image-url('bg_01.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center 5rem;
   background-blend-mode: lighten;
-  height: 90vh;
-  display:flex;
+  height: 100vh;
+  display: flex;
   align-items: center;
   justify-content: center;
   h2 {
     font-family: 'Noto Serif', cursive;
     color: #fff;
-    font-size: 6rem;
-    line-height: 4rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
     text-align: center;
     padding: 2rem;
   }
