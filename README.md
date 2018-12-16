@@ -32,7 +32,7 @@ To bring the database back to its initial state after introducing changes run `r
 
 ## Running the tests
 
-This app was developed using TDD approach with [RSpec](http://rspec.info/) and [Capybara](https://github.com/teamcapybara/capybara). To make sure all tests pass simply run `rspec`. If you need more detailed information, pass additional formatting options: `rspec --format doc` or `rspec -f d ` for short.
+This app was developed using TDD approach with [RSpec](http://rspec.info/) and [Capybara](https://github.com/teamcapybara/capybara). To make sure all tests pass simply run `rspec`. If you need more detailed information, pass additional formatting options: `rspec --format doc` or `rspec -f d` for short.
 
 
 ## Deployment
@@ -46,4 +46,4 @@ Run `heroku open` to view the app in browser.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License.
