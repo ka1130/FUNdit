@@ -1,76 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Cabin+Sketch:700|Noto+Serif|Roboto|Unica+One');
 @import "colors";
 
-/* General styles */
+// font-family: 'Unica One', cursive;
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Noto Serif', serif;
+// font-family: 'Abril Fatface', cursive;
+// font-family: 'Cabin Sketch', cursive;
+
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+ font-family: 'Work Sans', sans-serif;
+ font-weight: 300;
+ background-color: lighten($cream, 50%);
 }
 
-.main-content {
-  padding: 20px;
+h1, h2, h3, h4, h5, h6 {
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 900;
 }
 
 .app-header {
-  padding: 5px;
-  height: 100px;
-  color: $light-grey;
-  background: $poppy;
-  text-align: center;
-  border-bottom: 3px solid darken($poppy, 25%);
+  font-family: 'Unica One', cursive;
+  height: 5rem;
+  color: $cream;
+  background-color: $dark-water;
+  border-bottom: 0.2rem solid $cream;
   h1 {
-    line-height: 58px;
-    font-size: 37px;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 5rem;
   }
 }
 
-.sidebar {
-  float: right;
-  background: $light-grey;
-  height: calc(100vh - 93px);
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 10px;
-    li {
-      padding: 5px 0;
-    }
-    a {
-      color: darken($light-grey, 50%);
-      text-decoration: none;
-    }
+.hero {
+  background-color: $dark-water;
+  background-image: image-url('bg_01.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-blend-mode: lighten;
+  height: calc(100vh - 5rem);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    font-family: 'Noto Serif', cursive;
+    color: #fff;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    text-align: center;
+    padding: 2rem;
   }
 }
-
-footer {
-  margin-top: 20px;
-  height: 60px;
-  text-align: center;
-  padding: 5px;
-  color: darken($wasabi, 40%);
-  background: $soft-green;
-  border-top: 3px solid darken($soft-green, 25%);
-}
-
-/* show.html.erb */
-.single-project-header {
-  text-transform: uppercase;
-}
-
-.project-description-title {
-  font-size: 22px;
-  color: $poppy;
-  padding: 0;
-  margin: 20px 0 5px 0;
-  & + p {
-    padding: 0;
-    margin: 0 0 40px 0;
-    font-size: 16px;
-    font-style: italic;
-  }
-}
-
 
 
 

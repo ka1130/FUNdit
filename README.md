@@ -39,8 +39,10 @@ This app was developed using TDD approach with [RSpec](http://rspec.info/) and [
 
 Apart from Ruby, Rails and Bundler, you will need the [Heroku Toolbelt](https://toolbelt.heroku.com/).
 
-First make sure all changes are commited to git. Then run: `heroku create`
-Push your changes to Heroku: `git push heroku master`. This will deploy the app to the Heroku server.
+First make sure all changes are commited to git. 
+Then run: `heroku create`.
+Push your changes to Heroku: `git push heroku master`. 
+This will deploy the app to the Heroku server.
 Run `heroku open` to view the app in browser.
 
 

@@ -6,14 +6,34 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
-    <%= render 'layouts/sidebar' %>
-    <%= render "layouts/flashes" %>  
+    <%= render "layouts/header" %>
 
-    <%= yield %>
-    <%= render 'layouts/footer' %>
+    <% if content_for?(:hero) %>
+      <div id="hero">
+        <%= yield :hero %>
+      </div>
+    <% end %>
+
+    <main id="wrapper">
+
+      <%= render "layouts/flashes" %>
+
+      <div id="container">
+        <section id="sidebar">
+          <%= render "layouts/sidebar" %>
+        </section>
+        <section id="content">
+          <%= yield %>
+        </section>
+      </div>
+
+    </main>
+
+    <%= render "layouts/footer" %>
   </body>
 </html>

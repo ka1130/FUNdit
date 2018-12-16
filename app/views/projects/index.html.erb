@@ -1,3 +1,9 @@
+<% content_for :hero do %>
+  <section class="hero">
+    <h2>Give a bit.<br/><br/>Change a&nbsp;lot</h2>
+  </section>
+<% end %>
+
 <h1><%= pluralize(@projects.size, 'Project') %></h1>
 
 <% @projects.each do |project| %>
