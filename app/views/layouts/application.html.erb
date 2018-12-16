@@ -14,9 +14,7 @@
     <%= render "layouts/header" %>
 
     <% if content_for?(:hero) %>
-      <div id="hero">
-        <%= yield :hero %>
-      </div>
+      <%= yield :hero %>
     <% end %>
 
     <main id="wrapper">
