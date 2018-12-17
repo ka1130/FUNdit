@@ -9,9 +9,9 @@ module ProjectsHelper
 
   def image_for(project)
     if project.image_file_name.blank?
-      image_tag('placeholder.png')
+      asset_path 'placeholder.png'
     else
-      image_tag(project.image_file_name)
+      asset_path project.image_file_name
     end
   end
 end

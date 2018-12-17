@@ -4,14 +4,13 @@
   </section>
 <% end %>
 
-<h1><%= pluralize(@projects.size, 'Project') %></h1>
+<h3><%= pluralize(@projects.size, 'Project') %></h3>
 
 <% @projects.each do |project| %>
   <article class="main-content">
-    <header>
+    <header style="background: url(<%= image_for(project) %>)">
       <h3><%= link_to project.name, project %></h3>
       <p><%= truncate(project.description, length: 150, separator: ' ') %></p>
-      <%= image_for(project) %>
     </header>
     <table>
       <tr>

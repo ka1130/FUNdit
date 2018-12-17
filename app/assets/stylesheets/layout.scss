@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero {
-  background-color: #05386B;
+  background-color: $dark-water;
   background-image: image-url('bg_01.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -36,6 +36,37 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 3.5rem;
     text-align: center;
     padding: 2rem;
+  }
+}
+
+#container {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 6rem;
+}
+
+#content > h3 {
+  background-color: $vibrant-green;
+  color: $cream;
+  font-family: 'Noto Serif', serif;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+  margin: 0.25rem 0;    
+}
+
+.main-content {
+  background-color: $cream;
+  padding: 2rem;
+  h3 {
+    font-family: 'Noto Serif', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    a {
+      color: $dark-water;
+      text-decoration: none;
+    }     
   }
 }
 
