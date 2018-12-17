@@ -8,9 +8,11 @@
 
 <% @projects.each do |project| %>
   <article class="main-content">
-    <header style="background: url(<%= image_for(project) %>)">
-      <h3><%= link_to project.name, project %></h3>
-      <p><%= truncate(project.description, length: 150, separator: ' ') %></p>
+    <header style="background-image: url(<%= image_for(project) %>)">
+      <div class="project-description">
+        <h3><%= link_to project.name, project %></h3>
+        <p>&mdash; <%= truncate(project.description, length: 150, separator: ' ') %></p>        
+      </div>
     </header>
     <table>
       <tr>

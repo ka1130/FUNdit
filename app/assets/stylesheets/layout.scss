@@ -42,7 +42,6 @@ h1, h2, h3, h4, h5, h6 {
 #container {
   display: flex;
   flex-direction: column-reverse;
-  margin-top: 6rem;
 }
 
 #content > h3 {
@@ -57,17 +56,35 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-content {
   background-color: $cream;
-  padding: 2rem;
+  padding: 1rem;
+  & > header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20rem;
+    background-position: center center;
+    border: 0.2rem solid #fff;
+    position: relative;
+    margin-bottom: 1rem;
+  }
   h3 {
     font-family: 'Noto Serif', cursive;
     font-size: 1.5rem;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     a {
-      color: $dark-water;
+      color: #fff;
       text-decoration: none;
     }     
   }
+}
+
+.project-description {
+  color: #fff;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 
 
