@@ -7,14 +7,15 @@
 <h3><%= pluralize(@projects.size, 'Project') %></h3>
 
 <% @projects.each do |project| %>
-  <article class="main-content">
+  <section class="project-wrapper">
     <header style="background-image: url(<%= image_for(project) %>)">
       <div class="project-title">
         <h3><%= link_to project.name, project %></h3>
+        <p class="project-description">&mdash; <%= truncate(project.description, length: 150, separator: ' ') %></p>  
       </div>
     </header>
-    <p class="project-description">&mdash; <%= truncate(project.description, length: 150, separator: ' ') %></p>  
-    <table>
+    
+<!--     <table>
       <tr>
         <td>Target pledge amount:</td>
         <td><%= number_to_currency(project.target_pledge_amount) %></td>
@@ -30,6 +31,6 @@
       <tr>
         <td> <%= link_to "Delete", project_path(project), method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
-    </table>
-  </article>
+    </table> -->
+  </section>
 <% end %>
