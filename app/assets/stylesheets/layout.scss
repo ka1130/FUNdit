@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Unica+One|Ubuntu|Montserrat');
 @import "colors";
 
+body {
+  font-family: 'Montserrat', serif;
+}
+
 .hero {
   background-color: $dark-water;
   background-image: image-url('bg_01.jpg');
@@ -78,13 +82,22 @@
 
 #sidebar {
   background-color: $cool-forest;
-  padding: 1rem 2rem;
+  padding: 1.5rem;
   a {
     color: #fff;
     line-height: 2rem;
     text-transform: uppercase;
     font-family: 'Ubuntu', sans-serif;
   }
+}
+
+.main-footer {
+  background-color: $dark-water;
+  padding: 1.5rem;
+  font-size: 0.75rem;
+  color: $cream;
+  font-family: 'Montserrat', serif;
+  border-top: 0.2rem solid #fff;
 }
 
 
