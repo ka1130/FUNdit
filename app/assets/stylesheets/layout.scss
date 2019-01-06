@@ -83,11 +83,21 @@ body {
 #sidebar {
   background-color: $cool-forest;
   padding: 1.5rem;
+  border-top: 0.2rem solid #fff;
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
   a {
     color: #fff;
-    line-height: 2rem;
+    display: inline-block;
+    border: 0.1rem solid #fff;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
     text-transform: uppercase;
+    text-decoration: none;
     font-family: 'Ubuntu', sans-serif;
+    background-color: darken($cool-forest, 10%);
   }
 }
 
