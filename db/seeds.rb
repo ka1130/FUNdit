@@ -14,7 +14,7 @@ Project.create!([
     pledging_ends_on: 1.day.from_now,
     website: "http://project-a.com",
     team_members: "Member 1, Member 2, Member 3",
-    image_file_name: "company.jpeg"
+    image_file_name: "startup.jpeg"
   },
   {
     name: "Community Project",
@@ -23,7 +23,7 @@ Project.create!([
     pledging_ends_on: 1.week.from_now,
     website: "http://project-b.com",
     team_members: "Member A, Member B, Member C",
-    image_file_name: "earth.jpg"
+    image_file_name: "nasa.jpg"
   },
   {
     name: "Personal Project",
@@ -32,7 +32,7 @@ Project.create!([
     pledging_ends_on: 1.month.from_now,
     website: "http://project-c.com",
     team_members: "Member 1, Member 2, Member 3",
-    image_file_name: "personal.jpg"
+    image_file_name: "map_project.jpg"
   }
 ])
 

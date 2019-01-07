@@ -114,6 +114,20 @@ body {
   border-top: 0.2rem solid #fff;
 }
 
+@media screen and (orientation:landscape) {
+  .hero {
+    background-position: center -2rem;
+  }
+}
+
+@media screen and (min-width: 772px) {
+  .hero h2 {
+    font-size: 8rem;
+    line-height: 6rem;
+    font-weight: bold;
+  }
+}
+
 
 
 
