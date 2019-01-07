@@ -54,8 +54,10 @@ body {
   }
   h3 {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 2rem;
+    font-size: 1.25rem;
+    font-weight: bold;
     text-align: center;
+    text-transform: uppercase;
     a {
       color: #fff;
       text-decoration: none;
@@ -78,6 +80,7 @@ body {
 .project-description {
   font-family: 'Montserrat', serif;
   margin-top: 1rem;
+  font-size: 0.7rem;
 }
 
 #sidebar {
@@ -90,6 +93,7 @@ body {
   }
   a {
     color: #fff;
+    font-size: 0.75rem;
     display: inline-block;
     border: 0.1rem solid #fff;
     border-radius: 0.5rem;
