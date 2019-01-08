@@ -41,15 +41,25 @@ body {
   margin: 0.25rem 0;    
 }
 
+.all-projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-section-link {
+  text-decoration: none;
+  flex-grow: 1;
+}
+
 .project-wrapper {
-  background-color: $cream;
-  padding: 1rem;
+  margin: 1rem 1rem 3rem 1rem;
+  border: 0.0625rem solid #000;
   & > header {
     background-repeat: no-repeat;
     background-size: cover;
     height: 20rem;
     background-position: center center;
-    border: 0.2rem solid #fff;
     position: relative;
   }
   h3 {
@@ -78,9 +88,11 @@ body {
 }
 
 .project-description {
+  background-color: #fff;
   font-family: 'Montserrat', serif;
-  margin-top: 1rem;
-  font-size: 0.7rem;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #000;
 }
 
 #sidebar {
@@ -114,6 +126,16 @@ body {
   border-top: 0.2rem solid #fff;
 }
 
+.learn-more {
+  text-transform: uppercase;
+  text-align: right;
+  color: $dark-water;
+  padding: 1rem;
+  font-size: 0.7rem;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.05rem;
+}
+
 @media screen and (orientation:landscape) {
   .hero {
     background-position: center -2rem;
@@ -124,13 +146,31 @@ body {
       font-weight: bold;
     }
   }
+
+  .project-section-link {
+    flex-grow: 0;
+    flex-basis: 50%;
+  }
 }
 
 @media screen and (min-width: 772px) {
   .hero h2 {
-    font-size: 8rem;
-    line-height: 6rem;
+    font-size: 6rem;
+    line-height: 4rem;
+    margin-top: 2rem;
     font-weight: bold;
+  }
+
+  .project-section-link {
+    flex-grow: 0;
+    flex-basis: 20rem;
+  }
+
+  #sidebar nav ul {
+    justify-content: flex-start;
+    li {
+      margin-right: 1rem;
+    }
   }
 }
 

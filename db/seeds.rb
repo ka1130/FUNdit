@@ -8,11 +8,11 @@
 
 Project.create!([
   {
-    name: "Start-Up Project",
-    description: "A description of a start-up project",
-    target_pledge_amount: 100.00,
+    name: "Kanaka Ranger Program - East Maui",
+    description: "An indigenous ranger program to enhance visitor safety and protect the bio diversity of East Maui.",
+    target_pledge_amount: 1000.00,
     pledging_ends_on: 1.day.from_now,
-    website: "http://project-a.com",
+    website: "http://kanaka.com",
     team_members: "Member 1, Member 2, Member 3",
     image_file_name: "startup.jpeg"
   },
@@ -30,6 +30,15 @@ Project.create!([
     description: "A description of a person project",
     target_pledge_amount: 300.00,
     pledging_ends_on: 1.month.from_now,
+    website: "http://project-c.com",
+    team_members: "Member 1, Member 2, Member 3",
+    image_file_name: "map_project.jpg"
+  },
+  {
+    name: "Personal Project",
+    description: "A description of a person project",
+    target_pledge_amount: 250.00,
+    pledging_ends_on: 2.months.from_now,
     website: "http://project-c.com",
     team_members: "Member 1, Member 2, Member 3",
     image_file_name: "map_project.jpg"

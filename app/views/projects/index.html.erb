@@ -6,31 +6,18 @@
 
 <h3><%= pluralize(@projects.size, 'Project') %></h3>
 
-<% @projects.each do |project| %>
-  <section class="project-wrapper">
-    <header style="background-image: url(<%= image_for(project) %>)">
-      <div class="project-title">
-        <h3><%= link_to project.name, project %></h3>
-        <p class="project-description">&mdash; <%= truncate(project.description, length: 150, separator: ' ') %></p>  
+<section class="all-projects">
+  <% @projects.each do |project| %>
+    <%= link_to(project, class: 'project-section-link') do %>
+      <div class="project-wrapper">
+        <header style="background-image: url(<%= image_for(project) %>)">
+          <div class="project-title">
+            <h3><%= project.name %></h3>
+          </div>
+        </header>
+        <p class="project-description">&mdash; <%= truncate(project.description, length: 150, separator: ' ') %></p>
+        <p class="learn-more">Learn more</p>
       </div>
-    </header>
-    
-<!--     <table>
-      <tr>
-        <td>Target pledge amount:</td>
-        <td><%= number_to_currency(project.target_pledge_amount) %></td>
-      </tr>
-      <tr>
-        <td>Pledging ends on:</td>
-        <td><%= format_date(project) %></td>
-      </tr>
-      <tr>
-        <td>Website:</td>
-        <td><%= project.website %></td>
-      </tr>
-      <tr>
-        <td> <%= link_to "Delete", project_path(project), method: :delete, data: { confirm: "Are you sure?" } %></td>
-      </tr>
-    </table> -->
-  </section>
-<% end %>
+    <% end %>
+  <% end %>
+</section>
