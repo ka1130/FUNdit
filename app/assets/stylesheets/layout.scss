@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Unica+One|Ubuntu|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Unica+One|Ubuntu|Montserrat:400,500,600,700,800,900');
 @import "colors";
 
 body {
@@ -28,7 +28,7 @@ body {
 
 #container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 #content > h3 {
@@ -161,17 +161,49 @@ body {
     font-weight: bold;
   }
 
+  #content > h3 {
+    background-color: #fff;
+    color: $dark-water;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-top: 2rem;
+    font-size: 1.75rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  #container {
+    flex-direction: row;
+  }
+
   .project-section-link {
-    flex-grow: 0;
+    flex-grow: 1;
     flex-basis: 20rem;
   }
 
-  #sidebar nav ul {
-    justify-content: flex-start;
-    li {
-      margin-right: 1rem;
-    }
+  .project-description {
+    height: 2.5rem;
   }
+
+  #sidebar {
+    flex-basis: 20rem;
+    background-color: #fff;
+    padding: 5.5rem 1.5rem 0 0;
+    text-align: right;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    nav ul {
+      flex-direction: column;
+      li {
+        margin-bottom: 1rem;
+      }
+      a {
+        background-color: #fff;
+        border: 0;
+        color: #333;
+        text-decoration: underline;
+      }
+    }
+  } 
 }
 
 
