@@ -26,11 +26,6 @@ body {
   }
 }
 
-#container {
-  display: flex;
-  flex-direction: column;
-}
-
 #content > h3 {
   background-color: $vibrant-green;
   color: $cream;
@@ -124,6 +119,7 @@ body {
   color: $cream;
   font-family: 'Montserrat', serif;
   border-top: 0.2rem solid #fff;
+  margin-top:auto; 
 }
 
 .learn-more {
