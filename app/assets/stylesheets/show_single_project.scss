@@ -25,15 +25,22 @@
   }
 }
 
-.project-description {
+.single-project-description-wrapper {
   padding: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
   p {
     margin: 1rem 0;
     color: $dark-water;
+    line-height: 1.2rem;
     strong {
       font-weight: 600;
     }
   }
+}
+
+.single-project-description {
+  font-style: italic;
 }
 
 .project-website {
@@ -49,6 +56,12 @@
   text-align: center;
   font-size: 1rem;
   margin: 2rem;
+}
+
+.ending-date {
+  color: $vibrant-green;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 .pledge-cta-wrapper {

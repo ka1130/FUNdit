@@ -2,15 +2,15 @@
   <header class="single-project-header" style="background-image: url(<%= image_for(@project) %>)">
     <h2><%= @project.name %></h2>
   </header>
-  <section class="project-description">
-    <p><%= @project.description %></p>
+  <section class="single-project-description-wrapper">
+    <p class="single-project-description"><%= @project.description %></p>
     <p>
       <strong>Target pledge amount: </strong>
       <%= number_to_currency(@project.target_pledge_amount) %>
     </p>
     <p>
       <strong>Pledging ends on: </strong>
-      <%= format_date(@project) %>
+      <span class="ending-date"><%= format_date(@project) %></span>
     </p>
     <p>
       <strong>Website: </strong>
