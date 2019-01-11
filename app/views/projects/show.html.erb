@@ -1,10 +1,8 @@
 <article class="single-project-wrapper">
-  <header class="single-project-header">
-    <%= image_tag(image_for @project) %>
+  <header class="single-project-header" style="background-image: url(<%= image_for(@project) %>)">
     <h2><%= @project.name %></h2>
   </header>
   <section class="project-description">
-    <h4 class="project-description-title">Description</h4>
     <p><%= @project.description %></p>
     <p>
       <strong>Target pledge amount: </strong>
@@ -16,24 +14,21 @@
     </p>
     <p>
       <strong>Website: </strong>
-      <%= @project.website %>
+      <%= link_to(@project.website, @project.website, class: 'project-website') %>
     </p>
     <p>
       <strong>Team members: </strong>
       <%= @project.team_members %>
     </p>
-    <p>
+    <p class="pledges-amount">
       <%= link_to pluralize(@project.pledges.size, "pledge"), 
                     project_pledges_path(@project) %>
     </p>
     <%= pledge_link(@project) %>
-    <nav class="bottom links">
+    <nav class="bottom-links">
       <%= link_to "All projects", projects_path %>
       <%= link_to "Edit", edit_project_path(@project) %>
       <%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure?" } %> 
     </nav>    
   </section>
-
 </article>
-
-
