@@ -1,14 +1,11 @@
 @import "colors";
 
-.single-project-wrapper {
-  padding-top: 5rem;
-}
-
 .single-project-header {
   height: 12rem;
   position: relative;
   background-position-y: center;
   background-size: cover;
+  padding-top: 5rem;
   h2 {
     color: #fff;
     font-weight: bold;
@@ -29,6 +26,7 @@
   padding: 1.5rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.75rem;
+  min-height: calc(100vh - 29rem);
   p {
     margin: 1rem 0;
     color: $dark-water;
@@ -108,9 +106,12 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .single-project-header {
     height: 20rem;
+    flex-basis: 100%;
+    padding-top: 7rem;
+    margin-bottom: 1rem;
     h2 {
       padding: 1.5rem;
       font-size: 1.25rem;
@@ -119,9 +120,32 @@
 
   .single-project-description-wrapper {
     font-size: 0.9rem;
+    flex-basis: 40rem;
+    flex-grow: 1;
     .single-project-description {
-        margin-bottom: 2rem;
-      }
+      margin: 0;
+    }
   }
 
+  .pledges-amount {
+    margin: 0;
+    a {
+      text-align: left;
+      margin: 2rem 0 0 0;
+    } 
+  }
+
+  .pledge-cta-wrapper {
+    width: 15rem;
+  }
+
+  .bottom-links {
+    justify-content: flex-start;
+    a {
+      padding: 0 1rem 0 0;
+      &:not(:last-child):after {
+        right: 0.3rem;
+      }
+    }
+  }
 }

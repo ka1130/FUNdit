@@ -4,7 +4,7 @@
   </section>
 <% end %>
 
-<h3><%= pluralize(@projects.size, 'Project') %></h3>
+<h3 class="projects-header"><%= pluralize(@projects.size, 'Project') %></h3>
 
 <section class="all-projects">
   <% @projects.each do |project| %>

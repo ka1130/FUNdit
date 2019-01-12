@@ -11,25 +11,21 @@
   </head>
 
   <body>
-    <%= render "layouts/header" %>
-
-    <% if content_for?(:hero) %>
-      <%= yield :hero %>
-    <% end %>
-
-    <%= render "layouts/flashes" %>
-
     <main>
-      <section id="content">
-        <%= yield %>
-        <%= render "layouts/sidebar" %>
-      </section>
+      <%= render "layouts/header" %>
 
-      
+      <% if content_for?(:hero) %>
+        <%= yield :hero %>
+      <% end %>
+
+      <%= render "layouts/flashes" %>
+
+        <section id="content">
+          <%= yield %>
+          <%= render "layouts/sidebar" %>
+        </section>
+
+      <%= render "layouts/footer" %>
     </main>
-
-
-
-    <%= render "layouts/footer" %>
   </body>
 </html>

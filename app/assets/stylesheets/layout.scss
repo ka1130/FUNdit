@@ -10,11 +10,6 @@ body {
   min-height:100%; 
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-}
-
 .hero {
   background-color: $dark-water;
   background-image: image-url('bg_01.jpg');
@@ -39,16 +34,21 @@ main {
 #content {
   display: flex;
   flex-wrap: wrap;
-  h3 {
-    flex-basis: 100%;
-    background-color: $vibrant-green;
-    color: $cream;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 2rem;
-    padding: 1rem;
-    text-align: center;
-    margin: 0.25rem 0;  
-  }
+  width: 100%;
+  flex-direction: column;
+}
+
+.projects-header {
+  flex-basis: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  padding: 1rem;
+  text-transform: uppercase;
+  background-color: $vibrant-green;
+  color: $cream;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border-top: 0.2rem solid #fff;
 }
 
 .all-projects {
@@ -163,11 +163,7 @@ main {
   }
 }
 
-@media screen and (min-width: 768px) {
-  main {
-    flex-direction: row;
-  }
-
+@media screen and (min-width: 1024px) {
   .hero h2 {
     font-size: 6rem;
     line-height: 4rem;
@@ -175,7 +171,7 @@ main {
     font-weight: bold;
   }
 
-  #content > h3 {
+  .projects-header {
     background-color: #fff;
     color: $dark-water;
     text-transform: uppercase;
@@ -183,6 +179,15 @@ main {
     padding-top: 2rem;
     font-size: 1.75rem;
     font-family: 'Montserrat', sans-serif;
+  }
+
+  .all-projects {
+    flex-basis: 50rem;
+    flex-grow: 1;
+  }
+
+  #content {
+    flex-direction: row;
   }
 
   .project-section-link {
@@ -195,9 +200,9 @@ main {
   }
 
   .sidebar {
-    flex-basis: 20rem;
+    flex-basis: 10rem;
     background-color: #fff;
-    padding: 5.5rem 1.5rem 0 0;
+    padding: 0.5rem 1.5rem 0 0;
     text-align: right;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
