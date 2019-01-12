@@ -26,7 +26,6 @@
   padding: 1.5rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.75rem;
-  min-height: calc(100vh - 29rem);
   p {
     margin: 1rem 0;
     color: $dark-water;
@@ -106,10 +105,16 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-height: 1024px) {
+  .single-project-description-wrapper {
+    min-height: 24rem;
+  }  
+}
+
+@media screen and (min-width: 768px) {
   .single-project-header {
     height: 20rem;
-    flex-basis: 100%;
+    width: 100%;
     padding-top: 7rem;
     margin-bottom: 1rem;
     h2 {
@@ -120,7 +125,6 @@
 
   .single-project-description-wrapper {
     font-size: 0.9rem;
-    flex-basis: 40rem;
     flex-grow: 1;
     .single-project-description {
       margin: 0;
