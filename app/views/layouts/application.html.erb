@@ -17,20 +17,18 @@
       <%= yield :hero %>
     <% end %>
 
-    <main id="wrapper">
+    <%= render "layouts/flashes" %>
 
-      <%= render "layouts/flashes" %>
+    <main>
+      <section id="content">
+        <%= yield %>
+        <%= render "layouts/sidebar" %>
+      </section>
 
-      <div id="container">
-        <section id="content">
-          <%= yield %>
-        </section>
-        <section id="sidebar">
-          <%= render "layouts/sidebar" %>
-        </section>
-      </div>
-
+      
     </main>
+
+
 
     <%= render "layouts/footer" %>
   </body>

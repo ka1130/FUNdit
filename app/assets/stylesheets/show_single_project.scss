@@ -107,3 +107,21 @@
     }
   }
 }
+
+@media screen and (min-width: 768px) {
+  .single-project-header {
+    height: 20rem;
+    h2 {
+      padding: 1.5rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  .single-project-description-wrapper {
+    font-size: 0.9rem;
+    .single-project-description {
+        margin-bottom: 2rem;
+      }
+  }
+
+}

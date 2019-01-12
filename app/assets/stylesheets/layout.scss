@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Unica+One|Ubuntu|Montserrat:400,500,600,800,900');
 @import "colors";
 
+html { 
+  height:100%; 
+}
+
 body {
   font-family: 'Montserrat', serif;
+  min-height:100%; 
+}
+
+main {
+  display: flex;
+  flex-direction: column;
 }
 
 .hero {
@@ -26,14 +36,19 @@ body {
   }
 }
 
-#content > h3 {
-  background-color: $vibrant-green;
-  color: $cream;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 2rem;
-  padding: 1rem;
-  text-align: center;
-  margin: 0.25rem 0;    
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  h3 {
+    flex-basis: 100%;
+    background-color: $vibrant-green;
+    color: $cream;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 0.25rem 0;  
+  }
 }
 
 .all-projects {
@@ -90,7 +105,7 @@ body {
   color: #000;
 }
 
-#sidebar {
+.sidebar {
   background-color: $cool-forest;
   padding: 1.5rem;
   border-top: 0.2rem solid #fff;
@@ -119,7 +134,6 @@ body {
   color: $cream;
   font-family: 'Montserrat', serif;
   border-top: 0.2rem solid #fff;
-  margin-top:auto; 
 }
 
 .learn-more {
@@ -149,7 +163,11 @@ body {
   }
 }
 
-@media screen and (min-width: 772px) {
+@media screen and (min-width: 768px) {
+  main {
+    flex-direction: row;
+  }
+
   .hero h2 {
     font-size: 6rem;
     line-height: 4rem;
@@ -167,10 +185,6 @@ body {
     font-family: 'Montserrat', sans-serif;
   }
 
-  #container {
-    flex-direction: row;
-  }
-
   .project-section-link {
     flex-grow: 1;
     flex-basis: 20rem;
@@ -180,7 +194,7 @@ body {
     height: 2.5rem;
   }
 
-  #sidebar {
+  .sidebar {
     flex-basis: 20rem;
     background-color: #fff;
     padding: 5.5rem 1.5rem 0 0;
