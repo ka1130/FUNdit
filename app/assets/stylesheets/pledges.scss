@@ -75,3 +75,16 @@
     min-height: auto;
   }
 }
+
+@media screen and (min-width: 64rem) {
+  .pledges-header {
+    width: 100%;
+  }
+
+  .all-pledges-list {
+    min-height: calc(100vh - 20rem);
+    li {
+      line-height: 1.5rem;
+    }
+  }
+}
