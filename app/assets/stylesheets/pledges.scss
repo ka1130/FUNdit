@@ -26,9 +26,10 @@
   padding: 1rem;
   list-style: none;
   counter-reset: pledges-counter;
+  min-height: calc(100vh - 23rem);
   li {
     counter-increment: pledges-counter;
-    line-height: 1.5rem;
+    line-height: 1rem;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 3rem;
@@ -36,8 +37,8 @@
       content: counter(pledges-counter) "";
       font-family: 'Unica One', cursive;
       font-weight: bold;
-      background-color: lighten($dark-water, 50%);
-      color: white;
+      background-color: $cool-forest;
+      color: $cream;
       border-radius: 50%;
       display: flex;
       width: 2rem;
@@ -45,21 +46,32 @@
       justify-content: center;
       align-items: center;
     }
-    & > p {
-      padding-left: 3rem;
-      &:first-child {
-        padding-left: 1rem;
-      }
-    }
-    strong {
-      font-weight: 600;
-    }
+  }
+}
+
+.pledge-list-item {
+  width: calc(100% - 2rem);
+  p {
+    padding-left: 1rem;
+  }
+  strong {
+    font-weight: 600;
   }
 }
 
 .pledged-time {
-  width: 100%;
   text-align: right;
   font-size: 0.75rem;
   margin-top: 1rem;
+}
+
+.no-pledges {
+  padding: 1rem;
+  min-height: calc(100vh - 23rem);
+}
+
+@media screen and (orientation:landscape) {
+  .all-pledges-list {
+    min-height: auto;
+  }
 }

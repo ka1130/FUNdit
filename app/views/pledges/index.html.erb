@@ -1,19 +1,26 @@
 <h1 class="pledges-header">Pledges for <%= link_to(@project.name, @project) %></h2>
 
-<ol class="all-pledges-list">
-  <% @pledges.each do |pledge| %>
-    <li>
-      <p>
-        <strong><%= number_to_currency(pledge.amount) %></strong>
-        by <%= pledge.name %>
-      </p>
-      <p>email: <strong><%= pledge.email %></strong></p>
-      <p class="pledged-time"><%= time_ago_in_words(pledge.created_at) %> ago</p>
+<% if @project.pledges.length == 0 %>
+  <p class="no-pledges">There are no pledges for this project.</p>
+<% else %>
+  <ol class="all-pledges-list">
+    <% @pledges.each do |pledge| %>
+      <li>
+        <div class="pledge-list-item">
+           <p>
+            <strong><%= number_to_currency(pledge.amount) %></strong>
+            by <%= pledge.name %>
+          </p>
+          <p>email: <strong><%= pledge.email %></strong></p>
+          <p class="pledged-time"><%= time_ago_in_words(pledge.created_at) %> ago</p>  
 
-      <% if pledge.comment.length > 0 %>
-        <p>&quot;<%= pledge.comment %>&quot;</p>
-      <% end %>
+          <% if pledge.comment.length > 0 %>
+            <p>&quot;<%= pledge.comment %>&quot;</p>
+          <% end %>     
+        </div>
+      </li>
+    <% end %>
+  </ol>
+<% end %>
 
-    </li>
-  <% end %>
-</ol>
+
