@@ -3,17 +3,17 @@
 <ol class="all-pledges-list">
   <% @pledges.each do |pledge| %>
     <li>
-      <span>
+      <p>
         <strong><%= number_to_currency(pledge.amount) %></strong>
         by <%= pledge.name %>
-      </span>
+      </p>
       <p>email: <strong><%= pledge.email %></strong></p>
-      <p><%= time_ago_in_words(pledge.created_at) %> ago</p>
+      <p class="pledged-time"><%= time_ago_in_words(pledge.created_at) %> ago</p>
 
       <% if pledge.comment.length > 0 %>
         <p>&quot;<%= pledge.comment %>&quot;</p>
       <% end %>
-      
+
     </li>
   <% end %>
 </ol>

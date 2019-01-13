@@ -1,41 +1,65 @@
 // Place all the styles related to the Pledges controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import url('https://fonts.googleapis.com/css?family=Unica+One|buntu:400,500,700|Montserrat:400,500,600,800,900');
+@import url('https://fonts.googleapis.com/css?family=Unica+One|buntu:400,500,700|Montserrat:400,500,600,800');
 @import "colors";
 
 .pledges-header {
-  padding: 0.5rem;
-  margin-top: 2rem;
-  font-size: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 800;
   color: $dark-water;
+  text-align: center;
   a {
-    color: $dark-water;
+    color: $cool-forest;
+    display: block;
+    font-weight: 600;
+    font-size: 1.1rem;
   }
 }
 
 .all-pledges-list {
-  padding: 0.5rem;
+  padding: 1rem;
   list-style: none;
   counter-reset: pledges-counter;
   li {
     counter-increment: pledges-counter;
     line-height: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
     &:before {
-      content: counter(pledges-counter) ") ";
+      content: counter(pledges-counter) "";
       font-family: 'Unica One', cursive;
       font-weight: bold;
-      color: $dark-water;
-      font-size: 1.5rem;
+      background-color: lighten($dark-water, 50%);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      width: 2rem;
+      height: 2rem;
+      justify-content: center;
+      align-items: center;
     }
-    p {
-      width: 100%;
+    & > p {
+      padding-left: 3rem;
+      &:first-child {
+        padding-left: 1rem;
+      }
     }
     strong {
       font-weight: 600;
     }
   }
+}
+
+.pledged-time {
+  width: 100%;
+  text-align: right;
+  font-size: 0.75rem;
+  margin-top: 1rem;
 }
