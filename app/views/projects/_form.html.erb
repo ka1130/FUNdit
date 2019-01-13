@@ -21,6 +21,8 @@
   <%= f.label :image_file_name %>
   <%= f.text_field :image_file_name %>
 
-  <%= f.submit %>
-  <%= link_to "Cancel", projects_path %>
+  <div class="form-buttons">
+    <%= f.submit %>
+    <%= link_to "Cancel", projects_path %>    
+  </div>
 <% end %>
