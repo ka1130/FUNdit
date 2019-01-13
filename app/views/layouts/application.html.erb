@@ -20,7 +20,7 @@
 
       <%= render "layouts/flashes" %>
 
-        <section id="content">
+        <section id="<%= @main_container_id ||'content' %>">
           <%= yield %>
           <%= render "layouts/sidebar" %>
         </section>

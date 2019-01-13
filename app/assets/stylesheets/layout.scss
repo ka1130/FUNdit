@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Unica+One|Ubuntu|Montserrat:400,500,600,800,900');
+@import url('https://fonts.googleapis.com/css?family=Unica+One|buntu:400,500,700|Montserrat:400,500,600,800,900');
 @import "colors";
 
 html { 
@@ -37,6 +37,7 @@ body, main {
   display: flex;
   width: 100%;
   flex-direction: column;
+  margin-top: 5rem;
 }
 
 .projects-header {
@@ -148,6 +149,15 @@ body, main {
   letter-spacing: 0.05rem;
 }
 
+.edit-project-title {
+  margin-top: 1rem;
+  font-family: 'Ubuntu', sans-serif;
+  color: $dark-water;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.5rem;
+}
+
 @media screen and (orientation:landscape) {
   .hero {
     background-position: center -2rem;
@@ -166,6 +176,12 @@ body, main {
 }
 
 @media screen and (min-width: 1024px) {
+  #content {
+    margin-top: 7rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   .hero h2 {
     font-size: 6rem;
     line-height: 4rem;
@@ -186,11 +202,6 @@ body, main {
   .all-projects {
     flex-basis: 50rem;
     flex-grow: 1;
-  }
-
-  #content {
-    flex-direction: row;
-    flex-wrap: wrap;
   }
 
   .project-section-link {
@@ -222,7 +233,6 @@ body, main {
       }
     }
   } 
-
 }
 
 
