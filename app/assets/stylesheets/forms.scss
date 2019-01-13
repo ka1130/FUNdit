@@ -21,6 +21,11 @@
   textarea {
     height: 7rem;
   }
+  select {
+    border:0.0625rem solid #BEBEBE;
+    margin:0;
+    outline: none;
+  }
 }
 
 .form-buttons {
