@@ -40,73 +40,6 @@ body, main {
   margin-top: 5rem;
 }
 
-.projects-header {
-  flex-basis: 100%;
-  font-family: 'Ubuntu', sans-serif;
-  text-align: center;
-  padding: 1rem;
-  text-transform: uppercase;
-  background-color: $vibrant-green;
-  color: $cream;
-  font-weight: bold;
-  font-size: 1.3rem;
-  border-top: 0.2rem solid #fff;
-}
-
-.all-projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.project-section-link {
-  text-decoration: none;
-  flex-grow: 1;
-}
-
-.project-wrapper {
-  margin: 1rem 1rem 3rem 1rem;
-  border: 0.0625rem solid #000;
-  & > header {
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 20rem;
-    background-position: center center;
-    position: relative;
-  }
-  h3 {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 1.25rem;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    a {
-      color: #fff;
-      text-decoration: none;
-    }     
-  }
-}
-
-.project-title {
-  color: #fff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 1rem;
-  border-top: 0.05rem solid #fff;
-}
-
-.project-description {
-  background-color: #fff;
-  font-family: 'Montserrat', serif;
-  padding: 1rem;
-  font-size: 0.8rem;
-  color: #000;
-}
-
 .sidebar {
   background-color: $cool-forest;
   padding: 1.5rem;
@@ -139,25 +72,6 @@ body, main {
   margin-top:auto;
 }
 
-.learn-more {
-  text-transform: uppercase;
-  text-align: right;
-  color: $dark-water;
-  padding: 1rem;
-  font-size: 0.7rem;
-  font-family: 'Ubuntu', sans-serif;
-  letter-spacing: 0.05rem;
-}
-
-.edit-project-title {
-  margin-top: 1rem;
-  font-family: 'Ubuntu', sans-serif;
-  color: $dark-water;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 0.5rem;
-}
-
 @media screen and (orientation:landscape) {
   .hero {
     background-position: center -2rem;
@@ -167,11 +81,6 @@ body, main {
       margin-top: 2rem;
       font-weight: bold;
     }
-  }
-
-  .project-section-link {
-    flex-grow: 0;
-    flex-basis: 50%;
   }
 }
 
@@ -188,30 +97,6 @@ body, main {
     line-height: 4rem;
     margin-top: 2rem;
     font-weight: bold;
-  }
-
-  .projects-header {
-    background-color: #fff;
-    color: $dark-water;
-    text-transform: uppercase;
-    font-weight: 600;
-    padding-top: 2rem;
-    font-size: 1.75rem;
-    font-family: 'Montserrat', sans-serif;
-  }
-
-  .all-projects {
-    flex-basis: 50rem;
-    flex-grow: 1;
-  }
-
-  .project-section-link {
-    flex-grow: 1;
-    flex-basis: 20rem;
-  }
-
-  .project-description {
-    height: 2.5rem;
   }
 
   .sidebar {
@@ -234,13 +119,4 @@ body, main {
       }
     }
   } 
-
-  .edit-project-title {
-    width: 100%;
-  }
 }
-
-
-
-
-
