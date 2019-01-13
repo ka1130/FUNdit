@@ -105,13 +105,7 @@
   }
 }
 
-@media screen and (min-height: 1024px) {
-  .single-project-description-wrapper {
-    min-height: 24rem;
-  }  
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48.25rem) {
   .single-project-header {
     height: 20rem;
     width: 100%;
@@ -152,4 +146,11 @@
       }
     }
   }
+}
+
+
+@media screen and (min-height: 64rem) {
+  .single-project-description-wrapper {
+    min-height: 24rem;
+  }  
 }

@@ -175,11 +175,12 @@ body, main {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64rem) {
   #content {
     margin-top: 7rem;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .hero h2 {
@@ -233,6 +234,10 @@ body, main {
       }
     }
   } 
+
+  .edit-project-title {
+    width: 100%;
+  }
 }
 
 

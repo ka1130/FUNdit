@@ -57,3 +57,13 @@
     }
   }
 }
+
+@media screen and (min-width: 64rem) {
+  .form {
+    width: 45rem;
+  }
+
+  .form-buttons {
+    width: 20rem;
+  }
+}
