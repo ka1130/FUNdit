@@ -68,6 +68,32 @@
   }
 }
 
+.field_with_errors {
+  label {
+    color: $error-red-dark;
+  }
+  input, textarea, select {
+    background-color: $error-red-light;
+    border: 0.0625rem solid $error-red-dark;
+    outline: none;
+  }
+}
+
+#errors {
+  color: $error-red-dark;
+  header {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  ul {
+    li {
+      list-style-type: circle;
+      list-style-position: inside;
+      padding: 0.5rem 0;
+    }
+  }
+}
+
 @media screen and (orientation: landscape) {
   .form-buttons {
     max-width: 17rem;
