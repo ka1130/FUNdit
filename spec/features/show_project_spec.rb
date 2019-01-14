@@ -12,7 +12,6 @@ describe "Viewing an individual project" do
     expect(page).to have_text("$100,000.00")
     expect(page).to have_text(project.website)
     expect(page).to have_text(project.team_members)
-    expect(page).to have_css("img[src*='earth']")
   end
 
   it "shows the days remaining if the pledging end date is in the future" do

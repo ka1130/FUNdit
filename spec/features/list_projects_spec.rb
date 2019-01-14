@@ -31,9 +31,6 @@ describe "Viewing the list of projects" do
     expect(page).to have_text(projectC.name)
 
     expect(page).to have_text(projectA.description)
-    expect(page).to have_text("$100.00")
-    expect(page).to have_text(projectA.website)
-    expect(page).to have_css("img[src*='earth']")
   end
 
   it "does not show a project that is no longer accepting pledges" do
