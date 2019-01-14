@@ -2,7 +2,7 @@
 
 .form {
   max-width: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
   font: 0.8rem 'Montserrat', sans-serif;
   box-sizing: border-box;
   label {
@@ -28,15 +28,25 @@
   }
 }
 
+.form-title {
+  margin-top: 1rem;
+  font-family: 'Ubuntu', sans-serif;
+  color: $dark-water;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.25rem 1rem;
+}
+
 .form-buttons {
   display: flex;
   justify-content: space-between;
   margin: 2rem 0;
   input, a {
     border-radius: 0.5rem;
-    width: 9rem;
+    width: 8rem;
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 0.7rem;
   }
   input {
     border: 0;
@@ -58,12 +68,25 @@
   }
 }
 
-@media screen and (min-width: 64rem) {
+@media screen and (orientation: landscape) {
+  .form-buttons {
+    max-width: 17rem;
+  }
+}
+
+@media screen and (min-width: 48rem) {
   .form {
-    width: 45rem;
+    width: 30rem;
+    & + .sidebar {
+      padding-top: 3rem;
+    }
+  }
+
+  .form-title {
+    width: 100%;
   }
 
   .form-buttons {
-    width: 20rem;
+    width: 17rem;
   }
 }

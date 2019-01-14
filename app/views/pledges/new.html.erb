@@ -1,8 +1,6 @@
-<header>
-  <h1>New Pledge for <%#= link_to @pledge.name, project_pledge_path(@pledge) %></h1>
-</header>
+<h1 class="form-title">New Pledge for <%#= link_to @pledge.name, project_pledge_path(@pledge) %></h1>
 
-<%= form_for [@project, @pledge] do |f| %>
+<%= form_for [@project, @pledge], :html => {:class => 'form'} do |f| %>
   <%= render "shared/errors", object: @pledge %>
   <fieldset>
     <ol>
@@ -23,9 +21,9 @@
         <%= f.text_area :comment, cols: 80, placeholder: "Leave an optional comment" %>
       </li>
     </ol>
-    <p>
+    <div class="form-buttons">
       <%= f.submit 'Create Pledge' %> 
       <%= link_to "Cancel", @project %>
-    </p>
+    </div>
   </fieldset>
 <% end %>
