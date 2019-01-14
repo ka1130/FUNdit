@@ -25,6 +25,10 @@
 }
 
 /* PROJECTS */
+#index-page {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .projects-header {
   flex-basis: 100%;
@@ -92,7 +96,6 @@
   font-size: 0.8rem;
   color: #000;
 }
-
 
 .learn-more {
   text-transform: uppercase;

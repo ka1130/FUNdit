@@ -84,21 +84,14 @@ body, main {
   }
 }
 
-@media screen and (min-width: 64rem) {
+@media screen and (min-width: 48rem) {
   #content {
     margin-top: 7rem;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
-  .hero h2 {
-    font-size: 6rem;
-    line-height: 4rem;
-    margin-top: 2rem;
-    font-weight: bold;
-  }
-
+    
   .sidebar {
     flex-basis: 10rem;
     background-color: #fff;
@@ -119,4 +112,13 @@ body, main {
       }
     }
   } 
+}
+
+@media screen and (min-width: 64rem) {
+  .hero h2 {
+    font-size: 6rem;
+    line-height: 4rem;
+    margin-top: 2rem;
+    font-weight: bold;
+  }
 }

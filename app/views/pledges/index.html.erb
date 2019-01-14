@@ -16,7 +16,9 @@
 
           <% if pledge.comment.length > 0 %>
             <p>&quot;<%= pledge.comment %>&quot;</p>
-          <% end %>     
+          <% end %>  
+
+          <%= pledge_link(@project) %>   
         </div>
       </li>
     <% end %>

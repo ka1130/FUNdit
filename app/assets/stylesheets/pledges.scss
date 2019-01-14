@@ -27,12 +27,14 @@
   list-style: none;
   counter-reset: pledges-counter;
   min-height: calc(100vh - 23rem);
+  font-size: 0.85rem;
+  max-width: 20rem;
   li {
     counter-increment: pledges-counter;
     line-height: 1rem;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     &:before {
       content: counter(pledges-counter) "";
       font-family: 'Unica One', cursive;
@@ -62,7 +64,7 @@
 .pledged-time {
   text-align: right;
   font-size: 0.75rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 
 .no-pledges {
@@ -76,7 +78,7 @@
   }
 }
 
-@media screen and (min-width: 64rem) {
+@media screen and (min-width: 48rem) {
   .pledges-header {
     width: 100%;
   }
